@@ -52,7 +52,7 @@ as follows:
 | ...              | ...   | ...    | ...  | ...      | ...            | ...       | ...        |
 | g4pE_taske.txt   | 4     | E      | e    | non      | non-native     | 4         | 5          |
 
-From this file we can extract the following useful informatio:
+From this file we can extract the following useful information:
 
 -   There are $5$ groups, s.t.:
 
@@ -160,7 +160,6 @@ groups</figcaption>
 <img src="images/difficulty_n.png" />
 <figcaption>Distribution of Difficulty over groups</figcaption>
 </figure>
-<figcaption>Distributions over Groups</figcaption>
 </figure>
 
 ### Correlation Plot 
