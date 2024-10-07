@@ -303,7 +303,7 @@ model's ability to capture the true positives. This means that the
 model was able to detect all true positives for class 0 and $87\%$
 of true positives for class 1.
 
--   The presence of which type of plagiarism, i.e. the `Categories`. For
+The presence of which type of plagiarism, i.e. the `Categories`. For
 this task, the model is not performing as good as above, which means
 that it is difficult to find a correct separation between the three
 classes of plagiarism.While the model is able to detect a plagiarism
