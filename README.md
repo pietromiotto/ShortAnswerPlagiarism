@@ -1,21 +1,5 @@
----
-author:
-- Bhanu Prakash, Miotto Pietro
-date: April 12, 2024
-title: Data Analytics - Project 1 / Group Number 6 - Short Answer Plagia
----
 
-# Introduction {#sec:introduction}
-
-This document outlines the methodology and results for the Data
-Analytic's Project 1. Here, a group of two students was tasked to apply
-concepts seen in class to describe and analyse a given data set. The
-group consists of the following students:
-
--   Bhanu Prakash
-
--   Miotto Pietro
-
+# Short Answer Plagiarism Detection
 Our group has been tasked to conduct a similarity study to detect
 possible plagiarism between short answers. A set of five short answer
 questions (AE) on a variety of topics that might be included in the
@@ -40,7 +24,7 @@ were given with:
     or not) and the level of plagiarism of each answer w.r.t. the
     Wikipedia source article. This file serves as ground truth to test
     our model accuracy. We will focus more on this file later, in
-    Section [2](#sec:1){reference-type="ref" reference="sec:1"}
+    Section [2](#sec:1)
 
 We were tasked to use python and additional libraries to address the
 following points:
@@ -54,24 +38,19 @@ following points:
 
 -   Test the accuracy of the model using the test data
 
-# Data Exploration and Description {#sec:1}
+## Data Exploration and Description 
 
-## First Insights
+### First Insights
 
 The first step we made towards describing and analyizing the dataset,
 was to explore and understand the `EXCEL` file. This file is structured
 as follows:
-
-[]{#your-label label="your-label"}
-
-::: {#your-label}
-      **File**      **Group**   **Person**   **Task**   **Category**   **Native English**   **Knowledge**   **Difficulty**
-  ---------------- ----------- ------------ ---------- -------------- -------------------- --------------- ----------------
-   g0pA_taska.txt       0           A           a           non              native               1               1
-   g0pA_taskb.txt       0           A           b           cut              native               4               3
-        ...                                                                                                
-   g4pE_taske.txt       4           E           e           non            non-native             4               5
-:::
+| File             | Group | Person | Task | Category | Native English | Knowledge | Difficulty |
+|------------------|-------|--------|------|----------|----------------|-----------|------------|
+| g0pA_taska.txt   | 0     | A      | a    | non      | native         | 1         | 1          |
+| g0pA_taskb.txt   | 0     | A      | b    | cut      | native         | 4         | 3          |
+| ...              | ...   | ...    | ...  | ...      | ...            | ...       | ...        |
+| g4pE_taske.txt   | 4     | E      | e    | non      | non-native     | 4         | 5          |
 
 From this file we can extract the following useful informatio:
 
@@ -123,23 +102,21 @@ and a letter, and each document (i.e. short answer) is identified by the
 participant ID (group and letter) and by the task.
 
 ## Data Visualization
+ ![image](images/piechart.png)
 
-::: wrapfigure
-r0.5 ![image](images/images/piechart.png){width="50%"}
-:::
 
 At first, we focused on visualizing and exploring the `Excel` file
 labels. Given the task, the initial basic visualization was to compute a
 piechart of the plagiarism labels, to see how evenly distributed they
 were.
 
-### Distribution over Groups
+#### Distribution over Groups
 
 Our first assumption to investigate was looking for any interesting
 relationship between a certain group and certain values *(n.w. From now
 on with 'values' we refer to the column names of the excel file)*. The
 result that encouraged us to perform this kind of analysis was that, as
-shown in [2](#fig:image2){reference-type="ref" reference="fig:image2"},
+shown in [2](#fig:image2),
 the distribution of native and non-native speaker among each group is
 not uniform: we find two groups with native speakers only, one with
 non-native speakers only and two with a mixture of native and
@@ -147,8 +124,7 @@ non-native. We therefore wanted to check if the eterogeneous composition
 of a group (i.e. Knowledge and Nationality) could be linked to some
 levels of plagiarism or Difficulty. Thus, we focused on further
 investigating different distribution of values among groups. As you can
-see in [5](#fig:group-of-images){reference-type="ref"
-reference="fig:group-of-images"}, we wanted to see how Knowledge,
+see in [5](#fig:group-of-images), we wanted to see how Knowledge,
 Difficulty and Plagiarism Categories where distributed over groups. All
 the plot you see are normalized w.r.t. the number of components of the
 group. As a matter of example, we can note that members of group 2
@@ -158,7 +134,7 @@ more easy. We wanted to further investigate if the composition of a
 group and the distribution of its values could influence the plagiarism
 distribution, but then we noticed that the distribution of categories
 over groups were equally distributed. By looking at
-[1](#fig:image1){reference-type="ref" reference="fig:image1"}, we notice
+[1](#fig:image1), we notice
 that for each group, the distribution of categories is actually the
 same. This plot shows, for each group, the plagiarism level of its
 participant's answers. As we can see, all categories are equally
@@ -168,26 +144,26 @@ and the level of plagiarism.
 
 <figure id="fig:group-of-images">
 <figure id="fig:image1">
-<img src="images/images/category_n.png" />
+<img src="images/category_n.png" />
 <figcaption>Distribution of plagiarism categories over
 groups</figcaption>
 </figure>
 <figure id="fig:image2">
-<img src="images/images/native_n.png" />
+<img src="images/native_n.png" />
 <figcaption>Distribution of native language over groups</figcaption>
 </figure>
 <figure id="fig:image3">
-<img src="images/images/knowledge_n.png" />
+<img src="images/knowledge_n.png" />
 <figcaption>Distribution of Knowledge over groups</figcaption>
 </figure>
 <figure id="fig:image4">
-<img src="images/images/difficulty_n.png" />
+<img src="images/difficulty_n.png" />
 <figcaption>Distribution of Difficulty over groups</figcaption>
 </figure>
 <figcaption>Distributions over Groups</figcaption>
 </figure>
 
-### Correlation Plot {#subsec:corr}
+### Correlation Plot 
 
 With the aforementioned discovery, we head to computing a correlation
 plot to understand if plagiarism could instead be linked to individual
@@ -209,7 +185,7 @@ short answers, instead of considering also external indicators such as
 Nationality, Difficulty and Native Language.
 
 ![[]{#fig:corr label="fig:corr"} Correlation Matrix of all
-values](images/images/correlation.png){#fig:corr width="50%"}
+values](images/correlation.png){#fig:corr width="50%"}
 
 ### Text Analysis
 
@@ -258,7 +234,7 @@ with `class=1`, i.e. the Wikipedia source article, are marked as `orig.`
 Thus we end up with the following dataframe:
 
 ![[]{#fig:df1 label="fig:df1"} Dataframe of our
-dataset](images/images/df_v1.png){#fig:df1 width="60%"}
+dataset](images/df_v1.png)
 
 # Duplicate Detection Algorithm - Methodology
 
@@ -314,7 +290,6 @@ We used the Decision Tree model to correctly classify:
     correctly predict the labels **`0:{no plagiarism}`** and
     **`1:{heavy, cut, light}`**, with an accuracy of $92 \%$.
 
-    ::: {#tab:classification_report}
       Class           Precision   Recall   F1-score   Support
       -------------- ----------- -------- ---------- ---------
       0                 0.83       1.00      0.91       10
@@ -324,7 +299,7 @@ We used the Decision Tree model to correctly classify:
       Weighted avg      0.93       0.92      0.92       25
 
       : Classification report for Decision Tree on Class 0,1
-    :::
+
 
     We were able to get a good accuracy for both classes, which, in
     other words, means that for class 0 we have $0.27$ false positives,
@@ -340,7 +315,7 @@ We used the Decision Tree model to correctly classify:
     of type `cut`, the main issue seems to be between class heavy and
     light. The overall accuracy of the model is 72%.
 
-    ::: {#tab:classification_report}
+
           Class       Precision   Recall   F1-score   Support
       -------------- ----------- -------- ---------- ---------
          0 - non        0.83       1.00      0.91       10
