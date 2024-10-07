@@ -296,19 +296,19 @@ We used the Decision Tree model to correctly classify:
 | **Macro avg**     | 0.92      | 0.93   | 0.92     | 25      |
 | **Weighted avg**  | 0.93      | 0.92   | 0.92     | 25      |
 
-    We were able to get a good accuracy for both classes, which, in
-    other words, means that for class 0 we have $0.27$ false positives,
-    while for class 1 we have none. Also recall is good. It measures the
-    model's ability to capture the true positives. This means that the
-    model was able to detect all true positives for class 0 and $87\%$
-    of true positives for class 1.
+We were able to get a good accuracy for both classes, which, in
+other words, means that for class 0 we have $0.27$ false positives,
+while for class 1 we have none. Also recall is good. It measures the
+model's ability to capture the true positives. This means that the
+model was able to detect all true positives for class 0 and $87\%$
+of true positives for class 1.
 
 -   The presence of which type of plagiarism, i.e. the `Categories`. For
-    this task, the model is not performing as good as above, which means
-    that it is difficult to find a correct separation between the three
-    classes of plagiarism.While the model is able to detect a plagiarism
-    of type `cut`, the main issue seems to be between class heavy and
-    light. The overall accuracy of the model is 72%.
+this task, the model is not performing as good as above, which means
+that it is difficult to find a correct separation between the three
+classes of plagiarism.While the model is able to detect a plagiarism
+of type `cut`, the main issue seems to be between class heavy and
+light. The overall accuracy of the model is 72%.
 
 | Class            | Precision | Recall | F1-score | Support |
 |------------------|-----------|--------|----------|---------|
