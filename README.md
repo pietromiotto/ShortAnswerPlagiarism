@@ -288,16 +288,13 @@ We used the Decision Tree model to correctly classify:
     correctly predict the labels **`0:{no plagiarism}`** and
     **`1:{heavy, cut, light}`**, with an accuracy of $92 \%$.
 
-      Class           Precision   Recall   F1-score   Support
-      -------------- ----------- -------- ---------- ---------
-      0                 0.83       1.00      0.91       10
-      1                 1.00       0.87      0.93       15
-      Accuracy                               0.92       25
-      Macro avg         0.92       0.93      0.92       25
-      Weighted avg      0.93       0.92      0.92       25
-
-      : Classification report for Decision Tree on Class 0,1
-
+| Class            | Precision | Recall | F1-score | Support |
+|------------------|-----------|--------|----------|---------|
+| 0                | 0.83      | 1.00   | 0.91     | 10      |
+| 1                | 1.00      | 0.87   | 0.93     | 15      |
+| **Accuracy**      |           |        | 0.92     | 25      |
+| **Macro avg**     | 0.92      | 0.93   | 0.92     | 25      |
+| **Weighted avg**  | 0.93      | 0.92   | 0.92     | 25      |
 
     We were able to get a good accuracy for both classes, which, in
     other words, means that for class 0 we have $0.27$ false positives,
@@ -313,16 +310,13 @@ We used the Decision Tree model to correctly classify:
     of type `cut`, the main issue seems to be between class heavy and
     light. The overall accuracy of the model is 72%.
 
+| Class            | Precision | Recall | F1-score | Support |
+|------------------|-----------|--------|----------|---------|
+| 0 - non          | 0.83      | 1.00   | 0.91     | 10      |
+| 1 - heavy        | 0.50      | 0.20   | 0.29     | 5       |
+| 2 - light        | 0.40      | 0.40   | 0.40     | 5       |
+| 3 - cut          | 0.83      | 1.00   | 0.91     | 5       |
+| **Accuracy**      |           |        | 0.72     | 25      |
+| **Macro avg**     | 0.64      | 0.65   | 0.63     | 25      |
+| **Weighted avg**  | 0.68      | 0.72   | 0.68     | 25      |
 
-          Class       Precision   Recall   F1-score   Support
-      -------------- ----------- -------- ---------- ---------
-         0 - non        0.83       1.00      0.91       10
-        1 - heavy       0.50       0.20      0.29        5
-        2 - light       0.40       0.40      0.40        5
-         3 - cut        0.83       1.00      0.91        5
-         Accuracy                            0.72       25
-        Macro avg       0.64       0.65      0.63       25
-       Weighted avg     0.68       0.72      0.68       25
-
-      : Classification report
-    :::
