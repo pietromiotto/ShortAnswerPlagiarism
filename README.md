@@ -184,7 +184,7 @@ short answers, instead of considering also external indicators such as
 Nationality, Difficulty and Native Language.
 
 ![[]{#fig:corr label="fig:corr"} Correlation Matrix of all
-values](images/correlation.png){#fig:corr width="50%"}
+values](images/correlation.png)
 
 ### Text Analysis
 
@@ -239,8 +239,7 @@ dataset](images/df_v1.png)
 
 Our corpus is not unbearably large, given also that the answers, as
 shown in
-[\[tab:task_statistics\]](#tab:task_statistics){reference-type="ref"
-reference="tab:task_statistics"}, remains in a reasonable amount of
+[\[tab:task_statistics\]](#tab:task_statistics), remains in a reasonable amount of
 characters. Thus, we do not aim to implement a pipline for LSH. This
 said, we still need to adopt some similarity methods which are
 computationally efficient and which are robust with respect to slight
